@@ -1,0 +1,17 @@
+@import "./google-fonts.css";
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    body {
+        @apply text-white bg-main-bg;
+    }
+}
