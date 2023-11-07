@@ -10,9 +10,11 @@ export default function BooksList( {books, totalItems} : BooksListProps ) {
                     <div className="grid grid-cols-12 gap-8 my-12 lg:gap-2">
                         { books.map((book) => (<BookCard key={book.id} book={book} />)) }
                     </div>
-                    <div className="grid grid-cols-12 gap-8 my-12 lg:gap-2">
-                        <Pagination totalItems={totalItems} />
-                    </div>
+                    { totalItems > 0 && (
+                        <div className="grid grid-cols-12 gap-8 my-12 lg:gap-2">
+                            <Pagination totalItems={totalItems} />
+                        </div>
+                    ) }
                 </>
             ) }
         </>
